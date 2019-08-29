@@ -1,0 +1,430 @@
+/*
+    NAME: Ethan Maltes
+    DATE: August 23, 2019
+    CSE 154 AB Tal Wolman
+
+    This is the styles.css for Ethan's Cookies. This file gives the page a nice and responsive
+    display, cool animations, and other consistent styles.
+*/
+
+@import url("https://fonts.googleapis.com/css?family=Work+Sans&display=swap");
+
+body {
+  font-family: "Work Sans", sans-serif;
+  min-width: 750px;
+}
+
+.content, #catalogue-btm, #status {
+  width: 100%;
+}
+
+.content, footer, #catalogue-btm, #status {
+  text-align: center;
+}
+
+.content, #status {
+  color: white;
+}
+
+.content {
+  height: 35em;
+}
+
+.card, .card img {
+  width: 10em;
+}
+
+.card, #custom-selection, #view {
+  border-radius: 3px;
+}
+
+.card, #custom-selection, nav h2, footer a, .cart-card, .order-card {
+  color: black;
+}
+
+.card {
+  height: 15em;
+  border: #2980B9 solid 5px;
+  margin-top: 1.1em;
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
+.card, .topping, header {
+  position: relative;
+}
+
+.card h2, .card ul, #custom-order-btn {
+  margin-top: 1em;
+}
+
+.card h2, .card h3 {
+  margin-bottom: 1em;
+}
+
+.card h2, .card h3, .cart-card {
+  font-size: 1em;
+}
+
+nav {
+  font-size: 0.8em;
+}
+
+.description {
+  padding: 1px;
+  font-style: italic;
+}
+
+.description, .card ul {
+  font-size: 0.2em;
+}
+
+.card ul {
+  text-align: left;
+}
+
+.fade {
+  animation-delay: 2s;
+  animation: fadeIn 3s;
+}
+
+.fadeout {
+  animation: fadeIn reverse 5s;
+}
+
+.hidden, #catalogue.hidden, #customize.hidden, #cart.hidden, #single-view.hidden, #contact.hidden,
+  #login-form.hidden, #signup-form.hidden, #your-orders.hidden {
+  display: none;
+}
+
+#custom-selection, #view {
+  height: 30em;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 2px solid black;
+}
+
+#custom-selection {
+  width: 15em;
+}
+
+#view, #card-area, #catalogue, #customize, #single-view, #contact, header, nav, footer,
+  #login-form, #signup-form, #your-orders, #cart, #contact, .cart-card {
+  display: flex;
+}
+
+#view, #card-area, #customize, #single-view, #contact, #your-orders, #login-form, #signup-form,
+  #cart, #contact, .cart-card {
+  align-items: center;
+}
+
+#login-form, #signup-form {
+  margin-top: 8em;
+}
+
+#login-form, #signup-form, #catalogue, #cart, #contact {
+  flex-direction: column;
+}
+
+#view, footer {
+  width: 30em;
+}
+
+#view, footer, #cart, #contact, #your-orders {
+  justify-content: center;
+}
+
+#card-area, #catalogue, #customize, #single-view, #login-form, #signup-form, .cart-card {
+  justify-content: space-evenly;
+}
+
+#catalogue {
+  /** Background image from pxhere.com https://pxhere.com/en/photo/1453097*/
+  background: linear-gradient(rgba(134, 168, 231, 0.5), rgba(134, 168, 231, 0.5)), url("img/milkncookies.jpg");
+}
+
+#single-view {
+  /** Background image from needpix.com https://www.needpix.com/photo/download/630428/cookies-chocolate-cookie-nut-cookie-lighter-cookie-dark-cookie-delicious-eat-food-sweet*/
+  background: linear-gradient(rgba(134, 168, 231, 0.5), rgba(134, 168, 231, 0.5)), url("img/singleview.jpg");
+}
+
+#welcome {
+  /** Background image from pxhere.com https://pxhere.com/en/photo/1453093*/
+  background: linear-gradient(rgba(134, 168, 231, 0.5), rgba(134, 168, 231, 0.5)), url("img/cookies.jpg");
+}
+
+#customize {
+  /** Background image from flickr.com https://www.flickr.com/photos/30478819@N08/46404193711*/
+  background: linear-gradient(rgba(134, 168, 231, 0.5), rgba(134, 168, 231, 0.5)), url("img/dough.jpg");
+}
+
+#cart {
+  /** Background image from pixnio.com https://pixnio.com/food-and-drink/desserts-cakes/cookie-bread-food-toast-snack-diet*/
+  background: linear-gradient(rgba(134, 168, 231, 0.5), rgba(134, 168, 231, 0.5)), url("img/cart.jpg");
+}
+
+#order {
+  /** Background image from pxhere.com https://pxhere.com/en/photo/1377402/*/
+  background: linear-gradient(rgba(134, 168, 231, 0.5), rgba(134, 168, 231, 0.5)), url("img/order.jpg");
+}
+
+#contact {
+  /** Background image from wikimedia.com https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Cookies_and_milk.jpg/1024px-Cookies_and_milk.jpg*/
+  background: linear-gradient(rgba(134, 168, 231, 0.5), rgba(134, 168, 231, 0.5)), url("img/contact.jpg");
+}
+
+#faq {
+  /** Background image from pxhere.com https://pxhere.com/en/photo/1201983*/
+  background: linear-gradient(rgba(134, 168, 231, 0.5), rgba(134, 168, 231, 0.5)), url("img/faq.jpg");
+}
+
+#login {
+  /** Background image from pixnio.com https://pixnio.com/food-and-drink/desserts-cakes/biscuits-and-cookies-pictures/food-breakfast-homemade-brown-cookie-milk-kitchen*/
+  background: linear-gradient(rgba(134, 168, 231, 0.5), rgba(134, 168, 231, 0.5)), url("img/login.jpg");
+}
+
+#your-orders {
+  /** Background image from needpix.com https://www.needpix.com/photo/download/350787/chocolate-chip-cookie-dessert-milk-bake-rustic-food-homemade*/
+  background: linear-gradient(rgba(134, 168, 231, 0.5), rgba(134, 168, 231, 0.5)), url("img/your-orders.jpg");
+}
+
+#catalogue, #single-view, #welcome, #customize, #cart, #order, #contact, #faq , #login {
+  background-position-x: center;
+}
+
+#catalogue, #single-view, #welcome, #customize, #cart, #order, #contact, #faq , #login, #cookie {
+  background-size: cover;
+}
+
+#cookie {
+  background-image: url("img/classic-batter.png");
+  width: 20em;
+  height: 20em;
+}
+
+.toppings {
+  height: 100%;
+}
+
+.topping {
+  width: 2em;
+  height: 2em;
+  border-radius: 50%
+}
+
+.chip {
+  background-color: #3F000F;
+}
+
+.raisin {
+  background-color: #4F1A18;
+}
+
+.white {
+  background-color: white;
+}
+
+.macadamia {
+  background-color: #DFCF88;
+}
+
+.topping1 {
+  top: 15%;
+  left: 25%;
+}
+
+.topping2 {
+  top: 16%;
+  left: 61%;
+}
+
+.topping3 {
+  top: 61%;
+  left: 42%;
+}
+
+.topping4 {
+  top: 20%;
+  left: 20%;
+}
+
+.topping5 {
+  top: 14%;
+  left: 70%;
+}
+
+header {
+  justify-content: space-between;
+  height: 5em;
+}
+
+footer {
+  bottom: 0;
+}
+
+footer, #filter, #status {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#filter {
+  margin-top: 0.5em;
+}
+
+footer h3 {
+  margin-left: 6px;
+  margin-right: 6px;
+}
+
+h1 {
+  margin: 1em 1em 0em 1em;
+}
+
+header div {
+  height: 3em;
+}
+
+nav, body, header h2 {
+  margin: 0;
+}
+
+#login-nav {
+  margin-top: 0.75em;
+}
+
+.order, #status {
+  position: absolute;
+}
+
+.description {
+  margin-top: 2em;
+}
+
+h1 {
+  font-size: 1.5em;
+}
+
+nav h2 {
+  margin-right: 10px;
+}
+
+nav h2:hover, .remove:hover, .card h2:hover, footer h3:hover {
+  color: rgb(134, 168, 231);
+  cursor: pointer;
+}
+
+hr, #items, #order-list {
+  width: 80%;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+#right, #left {
+  font-size: 3em;
+}
+
+#right {
+  animation: moveRight 4s;
+  margin-left: 32.99%;
+}
+
+#left {
+  animation: moveLeft 4s;
+  padding-top: 1em;
+  margin-right: 32.99%;
+}
+
+.quantity {
+  width: 3em;
+  height: 1em;
+}
+
+.price {
+  font-size: 0.75em;
+}
+
+.order {
+  bottom: 0.25em;
+  left: 36%;
+}
+
+.cart-card {
+  height: auto;
+}
+
+.item-name {
+  display: inline-block;
+  width: 6em;
+}
+
+.highlight {
+  border: 2px solid red;
+}
+
+#items, #order-list {
+  height: 80%;
+}
+
+#items, #order-list, .card {
+  opacity: 0.9;
+  background-color: #ffffff;
+}
+
+#email {
+  width: 11.5em;
+}
+
+#phone-number {
+  width: 6.5em;
+}
+
+#question {
+  width: 50%;
+  height: 25%;
+}
+
+#status {
+  bottom: 7%;
+}
+
+#status-message {
+  margin-top: 0;
+  opacity: 0;
+}
+
+#card-area, #items, #order-list, .content {
+  overflow: scroll;
+}
+
+#card-area {
+  flex-wrap: wrap;
+  height: 23em;
+}
+
+@keyframes moveLeft {
+  from {
+     margin-right: 50%;
+  }
+  to {
+    margin-right: 33%;
+  }
+}
+
+@keyframes moveRight {
+  from {
+     margin-left: 50%;
+  }
+  to {
+    margin-left: 33%;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0.01;
+  }
+  to {
+    opacity: 1;
+  }
+}

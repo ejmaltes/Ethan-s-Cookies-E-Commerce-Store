@@ -1,0 +1,21 @@
+{
+  "name": "final-project-ejmaltes",
+  "version": "1.0.0",
+  "description": "_Special thanks to Tal Wolman for the original version of this project._",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.cs.washington.edu:cse154-19su-students/final-project-ejmaltes.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.4",
+    "express": "^4.17.1",
+    "multer": "^1.4.2",
+    "promise-mysql": "^4.1.0"
+  }
+}

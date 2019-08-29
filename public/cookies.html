@@ -1,0 +1,190 @@
+<!--
+  NAME: Ethan Maltes
+  DATE: August 23, 2019
+  CSE 154 AB Tal Wolman
+
+  This is the HTML for the entire Ethan's Cookies website.  It defines all of the views used, which
+  are switched between using DOM manipulation in cookies.js.  This page allows the user to
+  view, customize, and buy the delicious cookies that Ethan's Cookies has to offer.
+-->
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link href="cookies.css" rel="stylesheet" />
+    <title>Ethan's Cookies</title>
+    <script src="cookies.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1 id="cookies">Ethan's Cookies</h1>
+      <div>
+        <nav id="login-nav">
+          <h2 id="user-welcome" class="hidden fade">Welcome!</h2>
+          <h2 id="login-btn" class="hidden">Log In</h2>
+          <h2 id="your-orders-btn" class="hidden fade">Your Orders</h2>
+          <h2 id="signup-btn" class="hidden">Sign Up</h2>
+          <h2 id="logout-btn" class="hidden">Log Out</h2>
+        </nav>
+        <nav id="bar">
+          <h2 id="welcome-btn">Welcome</h2>
+          <h2 id="catalogue-btn">Our Catalogue</h2>
+          <h2 id="customize-btn">Make Your Own</h2>
+          <h2 id="cart-btn">Cart</h2>
+        </nav>
+      </div>
+    </header>
+
+    <section id="welcome" class="fade content">
+      <div id="left" class="fade">
+        <p>Modern cookie lovers...</p>
+      </div>
+      <div id="right" class="fade">
+        <p>... require modern cookie suppliers</p>
+      </div>
+    </section>
+
+    <section id="catalogue" class="fade hidden content">
+      <nav id="filter" class="fade">
+        <label>Batter:</label>
+        <select name="batter">
+          <option value="none">No Filter</option>
+          <option value="classic">Classic</option>
+          <option value="snickerdoodle">Snickerdoodle</option>
+          <option value="chocolate">Chocolate</option>
+        </select>
+      </nav>
+      <div id="card-area"></div>
+    </section>
+
+    <section id="single-view" class="fade hidden content">
+      <div id="item-area"></div>
+    </section>
+
+    <section id="customize" class="fade hidden content">
+      <div id="view">
+        <div id="cookie">
+          <div class="toppings" id="chocolate-chips">
+            <div class="chip topping topping1"></div>
+            <div class="chip topping topping2"></div>
+            <div class="chip topping topping3"></div>
+            <div class="chip topping topping4"></div>
+            <div class="chip topping topping5"></div>
+          </div>
+          <div class="toppings hidden" id="raisins">
+            <div class="raisin topping topping1"></div>
+            <div class="raisin topping topping2"></div>
+            <div class="raisin topping topping3"></div>
+            <div class="raisin topping topping4"></div>
+            <div class="raisin topping topping5"></div>
+          </div>
+          <div class="toppings hidden" id="macadamia-nuts">
+            <div class="macadamia topping topping1"></div>
+            <div class="macadamia topping topping2"></div>
+            <div class="macadamia topping topping3"></div>
+            <div class="macadamia topping topping4"></div>
+            <div class="macadamia topping topping5"></div>
+          </div>
+          <div class="toppings hidden" id="white-chocolate">
+            <div class="white topping topping1"></div>
+            <div class="white topping topping2"></div>
+            <div class="white topping topping3"></div>
+            <div class="white topping topping4"></div>
+            <div class="white topping topping5"></div>
+          </div>
+        </div>
+      </div>
+      <section id="custom-selection">
+        <div id="batter">
+          <h2>Batter:</h2>
+          <fieldset class="custom-btn">
+            <label>Classic</label>
+            <input type="radio" id="classic-batter-btn" name="batter" />
+            <label>Chocolate</label>
+            <input type="radio" id="chocolate-batter-btn" name="batter" />
+            <label>Snickerdoodle</label>
+            <input type="radio" id="snickerdoodle-batter-btn" name="batter" />
+          </fieldset>
+        </div>
+        <div id="toppings">
+          <h2>Toppings:</h2>
+          <fieldset class="custom-btn">
+            <label>Chocolate Chips</label>
+            <input type="radio" id="chocolate-chips-btn" name="toppings" />
+            <label>Raisins</label>
+            <input type="radio" id="raisins-btn" name="toppings" />
+            <label>Macadamia Nuts</label>
+            <input type="radio" id="macadamia-nuts-btn" name="toppings" />
+            <label>White Chocolate Chips</label>
+            <input type="radio" id="white-chocolate-btn" name="toppings" />
+          </fieldset>
+        </div>
+        <div id="add-ons">
+          <h2>Add-ons:</h2>
+          <fieldset class="custom-btn">
+            <label>Milk</label>
+            <input type="checkbox" id="milk-btn" name="add-on" />
+            <label>Chocolate Dipped</label>
+            <input type="checkbox" id="chocolate-dipped-btn" name="add-on" />
+            <label>Vanilla Ice Cream</label>
+            <input type="checkbox" id="vanilla-ice-cream-btn" name="add-on" />
+          </fieldset>
+        </div>
+        <button id="custom-order-btn">Add To Cart</button>
+        <p id="custom-confirmation" class="hidden">Added to Cart!<p>
+      </section>
+    </section>
+
+    <section id="cart" class="fade hidden content">
+      <article id="items">
+      </article>
+      <section id="inputs">
+        <label>Phone Number:</label>
+        <input id="phone-number" type="text" size=10 placeholder="1234567890" required />
+        <label>E-mail:</label>
+        <input id="email" type="text" pattern="^\S+@\S+.\S+$"
+          placeholder="example@example.com" required />
+        <button id="order-btn">Place Order</button>
+      </section>
+    </section>
+
+    <section id="your-orders" class="fade hidden content">
+      <section id="order-list"></section>
+    </section>
+
+    <section id="contact" class="fade hidden content">
+      <h2>Please submit a question or complaint!</h2>
+      <textarea id="question" placeholder="Write your question here!"></textarea>
+      <button id="question-submit">Submit</button>
+    </section>
+
+    <section id="login" class="fade hidden content">
+      <form id="login-form" class="hidden">
+        <label>Username:</label>
+        <input id="login-username" type="text" required />
+        <label>Password:</label>
+        <input id="login-password" type="password" required />
+        <button type="submit" value="submit">Log In</button>
+      </form>
+      <form id="signup-form" class="hidden">
+        <label>Username:</label>
+        <input id="signup-username" type="text" required />
+        <label>Email:</label>
+        <input id="signup-email" type="text" required />
+        <label>Password:</label>
+        <input id="signup-password" type="password" required />
+        <label>Retype Password:</label>
+        <input id="signup-repassword" type="password" required />
+        <button type="submit" value="submit">Sign Up</button>
+      </form>
+    </section>
+
+    <section id="status"></section>
+
+    <footer>
+        <h3 id="contact-btn">Contact Us</h3>
+    </footer>
+  </body>
+</html>
